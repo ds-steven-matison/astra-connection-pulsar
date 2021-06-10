@@ -17,9 +17,7 @@ export ASTRA_TOPIC=persistent://pulsar-poc/default/pulsar-poc
 To execute the project run the folowing commands:
 
 ```
-cd java/astraconnection
-mvn compile
-mvn exec:java -Dexec.mainClass="astraconnection.SimpleProducer" -Dexec.args="testing command line message 2"
+mvn exec:java -Dexec.mainClass="astraconnection.SimpleProducer" -Dexec.args="testing command line message"
 mvn exec:java -Dexec.mainClass="astraconnection.SimpleReader"
 mvn exec:java -Dexec.mainClass="astraconnection.SimpleProducer"
 ```
