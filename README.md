@@ -1,8 +1,8 @@
 Build the project as follows:
 
 ```
-git clone [THIS REPO]
-cd java/astraconnection
+git clone https://github.com/ds-steven-matison/astra-connection-pulsar.git
+cd astra-connection-pulsar/java/astraconnection
 mvn compile
 ```
 
