@@ -25,7 +25,7 @@ mvn exec:java -Dexec.mainClass="astraconnection.SimpleConsumer"
 To test Pulsar Kafka Adaptor run this command:
 
 ```
-mvn exec:java -Dexec.mainClass="astraconnection.KafkaProducer"
+mvn exec:java -Dexec.mainClass="astraconnection.KafkaProducer" -Dexec.args="testing command line message"
 mvn exec:java -Dexec.mainClass="astraconnection.KafkaConsumer"
 ```
 

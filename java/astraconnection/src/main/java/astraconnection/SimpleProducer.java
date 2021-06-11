@@ -3,6 +3,8 @@ import java.io.File;
 import org.apache.pulsar.client.api.*;
 import java.io.IOException;
 import java.util.Map;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class SimpleProducer {
 
@@ -40,4 +42,5 @@ private static final String SERVICE_URL = System.getenv("ASTRA_SERVICE_URL");
 
     }
 
+    private static final Logger log = LoggerFactory.getLogger(SimpleProducer.class);
 }

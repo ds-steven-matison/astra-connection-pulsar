@@ -33,7 +33,6 @@ public class SimpleReader {
 
             if(msg != null){
                 System.out.printf("Message received: %s%n",  new String(msg.getData()));
-
                 receivedMsg = true;
             }
 
