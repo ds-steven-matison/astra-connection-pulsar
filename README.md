@@ -26,6 +26,7 @@ To test Pulsar Kafka Adaptor run this command:
 
 ```
 mvn exec:java -Dexec.mainClass="astraconnection.KafkaProducer"
+mvn exec:java -Dexec.mainClass="astraconnection.KafkaConsumer"
 ```
 
 To test the Astra Driver Connection modify DriverConnect.java with your credentials, provide path to secure bundle, and run this command:
