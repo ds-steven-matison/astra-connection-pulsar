@@ -11,7 +11,8 @@ import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.IntegerSerializer;
 import org.apache.kafka.common.serialization.StringSerializer;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class KafkaProducer {
 
@@ -39,14 +40,16 @@ private static final String SERVICE_URL = System.getenv("ASTRA_SERVICE_URL");
         props.put("key.serializer", IntegerSerializer.class.getName());
         props.put("value.serializer", StringSerializer.class.getName());
 
+        @SuppressWarnings("resource")
         Producer<Integer, String> producer = new PulsarKafkaProducer<>(props);
 
         for (int i = 0; i < 10; i++) {
-            producer.send(new ProducerRecord<Integer, String>(topic, i, "hello-" + i));
-            System.out.printf("Message %s sent successfully",  i);
+            producer.send(new ProducerRecord<Integer, String>(topic, i, message + " " + i));
+            System.out.printf("Message [%s] sent successfully",  message + " " + i);
         }
 
         producer.close();
     }
 
+     private static final Logger log = LoggerFactory.getLogger(KafkaProducer.class);
 }
