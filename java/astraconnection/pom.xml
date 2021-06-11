@@ -16,10 +16,21 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <pulsar.version>2.7.2</pulsar.version>
+    <pulsar.version>2.6.4</pulsar.version>
   </properties>
 
   <dependencies>
+    <dependency>
+      <groupId>org.apache.pulsar</groupId>
+      <artifactId>pulsar-client-kafka</artifactId>
+      <version>2.6.4</version>
+    </dependency>
+    <dependency>
+  <groupId>org.apache.pulsar</groupId>
+  <artifactId>pulsar-client-kafka-original</artifactId>
+  <version>2.6.4</version>
+</dependency>
+
     <dependency>
           <groupId>org.apache.pulsar</groupId>
           <artifactId>pulsar-client</artifactId>
@@ -36,6 +47,7 @@
       <artifactId>cassandra-driver-core</artifactId>
       <version>3.8.0</version>
     </dependency>
+
  
 <!--
     <dependency>

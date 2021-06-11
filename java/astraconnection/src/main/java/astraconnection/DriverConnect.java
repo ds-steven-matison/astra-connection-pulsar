@@ -15,7 +15,7 @@ public class DriverConnect
     {
         Cluster cluster = Cluster.builder()
             .withCloudSecureConnectBundle(new File("../../secure-connect-bundle.zip"))
-            .withCredentials("demo", "demo2020")
+            .withCredentials("ClientId", "ClientSecret")
             .withSocketOptions(
                 new SocketOptions()
                         .setConnectTimeoutMillis(2000))
