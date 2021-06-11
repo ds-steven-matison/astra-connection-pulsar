@@ -37,6 +37,9 @@ private static final String SERVICE_URL = System.getenv("ASTRA_SERVICE_URL");
         props.put("bootstrap.servers", SERVICE_URL);
         props.put("pulsar.authentication.class", "org.apache.pulsar.client.impl.auth.AuthenticationTls");
         props.put("pulsar.authentication.params.map", map);
+        props.put("pulsar.use.tls", true);
+        props.put("pulsar.tls.allow.insecure.connection", false);
+        props.put("pulsar.tls.trust.certs.file.path", "");
         props.put("key.serializer", IntegerSerializer.class.getName());
         props.put("value.serializer", StringSerializer.class.getName());
 
