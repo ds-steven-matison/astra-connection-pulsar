@@ -39,7 +39,7 @@ private static final String SERVICE_URL = System.getenv("ASTRA_SERVICE_URL");
         props.put("pulsar.authentication.params.map", map);
         props.put("pulsar.use.tls", true);
         props.put("pulsar.tls.allow.insecure.connection", false);
-        props.put("pulsar.tls.trust.certs.file.path", "");
+        props.put("pulsar.tls.trust.certs.file.path", "/nifi/ssl/cacerts");
         props.put("key.serializer", IntegerSerializer.class.getName());
         props.put("value.serializer", StringSerializer.class.getName());
 

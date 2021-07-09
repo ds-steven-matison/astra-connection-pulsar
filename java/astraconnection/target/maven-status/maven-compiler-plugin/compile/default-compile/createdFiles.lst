@@ -1,6 +1,7 @@
+astraconnection/SimpleReader.class
+astraconnection/DemoBean.class
+astraconnection/KafkaProducer.class
 astraconnection/SimpleConsumer.class
 astraconnection/SimpleProducer.class
-astraconnection/SimpleReader.class
 astraconnection/DriverConnect.class
-astraconnection/KafkaProducer.class
 astraconnection/KafkaConsumer.class
